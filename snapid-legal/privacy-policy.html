@@ -1,144 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – SnapID</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 16px;
-      color: #111;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnapId Privacy Policy</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #4a4a4a;
+    --accent: #0b6bcb;
+    --rule: #e3e3e3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --fg: #f2f2f2;
+      --muted: #c2c2c2;
+      --accent: #6fb3ff;
+      --rule: #2e2e2e;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-    h2 {
-      margin-top: 32px;
-      font-size: 1.3rem;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    footer {
-      margin-top: 48px;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 40px 16px 72px;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 34px 0 8px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  h3 { font-size: 16px; margin: 20px 0 4px; }
+  p, li { color: var(--muted); }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .updated { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+  strong { color: var(--fg); }
+</style>
 </head>
 <body>
-
-  <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> 2026-03-29</p>
+<main>
+  <h1>SnapId Privacy Policy</h1>
+  <p class="updated">Last updated: 24 September 2026</p>
 
   <h2>Overview</h2>
   <p>
-    Your privacy is important to us. This Privacy Policy explains what information SnapID
-    processes and how it is used in order to provide AI-powered object identification,
-    descriptions, and related features.
+    SnapId is a camera app that identifies objects you photograph. It cannot do that on its own: to produce a name
+    and description, the photo you take is sent to <strong>OpenAI</strong>, a third-party artificial intelligence
+    provider in the United States. This policy explains exactly what data SnapId collects, how it is collected,
+    every purpose it is used for, and every third party it is shared with.
+  </p>
+  <p>
+    SnapId never sends a photo to OpenAI until you have read the in-app AI disclosure and tapped
+    &ldquo;Agree and continue&rdquo;. You can withdraw that permission at any time under
+    <strong>Settings &rsaquo; AI &amp; Data Sharing</strong>, and sharing stops immediately.
   </p>
 
-  <h2>Data We Process in the App</h2>
+  <h2>What data we collect, and how</h2>
   <p>
-    SnapID is primarily designed to run on your device. The app may store the following
-    information locally on your phone or tablet:
+    SnapId has no user accounts. We never ask for and never receive your name, email address, phone number,
+    contacts, precise location, or advertising identifier. The app handles only the following:
   </p>
   <ul>
     <li>
-      App preferences such as theme, language, and appearance settings.
+      <strong>Photos you capture.</strong> Collected through your device camera, only when you tap the scan button
+      and grant the camera permission. You then crop the photo to the object you want identified. SnapId does not
+      read your photo library and does not scan in the background.
     </li>
     <li>
-      App-related state such as onboarding progress, subscription status flags, and a
-      lightweight history of objects you scanned or identified.
+      <strong>Identification results.</strong> The name, category, description and detail sections returned by the
+      AI provider for each scan.
     </li>
     <li>
-      Daily usage counters (for example, how many scans you have performed today) to enforce
-      free-tier limits.
+      <strong>An anonymous sign-in identifier.</strong> Generated automatically by Firebase Anonymous
+      Authentication the first time you agree to AI sharing. It is a random string tied to this app installation
+      and is not linked to any personal identifier. Its only job is to let our relay server apply a daily request
+      limit.
+    </li>
+    <li>
+      <strong>App preferences and usage counters.</strong> Theme, accent colour, language, whether you have seen
+      onboarding, your subscription status flag, and how many scans you have made today. Collected from your own
+      interactions with the app.
+    </li>
+    <li>
+      <strong>Your AI sharing choice.</strong> Whether you agreed to AI sharing, which version of the disclosure
+      you agreed to, and when.
+    </li>
+    <li>
+      <strong>Subscription receipts.</strong> When a subscription purchase succeeds, the store-issued product ID,
+      transaction ID, transaction date and purchase token are recorded in our Firebase Realtime Database so we can
+      verify entitlements and resolve billing disputes. This record contains no name, email or payment card data.
     </li>
   </ul>
   <p>
-    We do not require you to create an account, and we do not collect your name, email address,
-    or other direct personal identifiers from within the app.
+    Photos, results, preferences, counters and your consent record are stored only on your device. Deleting SnapId
+    removes them. We keep no copy of your photos or scan history on any server we operate; subscription receipts
+    are the only record held on our side.
   </p>
 
-  <h2>Images, Objects, and AI Services</h2>
-  <p>
-    When you scan an object or use AI-powered features (such as identification or detailed
-    descriptions), the app may send relevant content (for example, an image of the object
-    or a text prompt) to third-party AI providers in order to generate identifications,
-    descriptions, or other information.
-  </p>
-  <p>
-    These providers process the content solely to generate responses back to the app. We do
-    not use this content to build advertising profiles. AI providers may temporarily process
-    or log requests to operate and secure their services. Their handling of data is governed
-    by their own privacy policies, which you should review.
-  </p>
-  <p>
-    Please avoid including personal, sensitive, or confidential information in images or text
-    submitted through the app (such as faces, full names, addresses, or identification numbers).
-  </p>
-
-  <h2>Purchases and Subscriptions</h2>
-  <p>
-    Purchases and subscriptions for SnapID are processed by Apple or Google, not directly
-    by us. We do not receive your full payment details, such as credit card numbers. Billing
-    and payment information is handled under the App Store or Google Play privacy policies
-    and terms.
-  </p>
-
-  <h2>Diagnostics and Analytics</h2>
-  <p>
-    To help improve app stability and understand feature usage, we may collect basic,
-    anonymized diagnostics or analytics data (such as crash reports, screen visits, or
-    generic device information). This data is used only to improve the app and does not
-    aim to personally identify you.
-  </p>
-
-  <h2>Your Choices & Data Control</h2>
-  <p>You can:</p>
+  <h2>How we use this data</h2>
   <ul>
-    <li>
-      Manage or cancel subscriptions through your App Store or Google Play account settings.
-    </li>
-    <li>
-      Disable certain system-level analytics or ad-tracking options in your device settings,
-      depending on your platform.
-    </li>
-    <li>
-      Delete the app at any time, which removes locally stored data such as preferences and
-      scan history from your device.
-    </li>
+    <li>To identify the object in your photo and show you the result. This is the only purpose the photo is used for.</li>
+    <li>To show your own scan history on your device.</li>
+    <li>To enforce free-tier daily scan limits and unlock Premium features.</li>
+    <li>To remember your settings and your AI sharing decision between launches.</li>
   </ul>
   <p>
-    If you have privacy questions, you can contact the developer using the contact details
-    provided in the app store listing.
+    We do not sell your data, do not share it with advertisers or data brokers, do not use it for advertising or
+    tracking across apps or websites, and do not build a profile about you.
   </p>
 
-  <h2>Children's Privacy</h2>
+  <h2>Third parties we share data with</h2>
   <p>
-    SnapID is not directed at children under 13. We do not knowingly collect personally
-    identifiable information from children. If you believe a child has provided personal
-    information through the app, please contact us via the app store listing so we can
-    address your request.
+    These are the only third parties that receive any data from SnapId. Each is bound by a contract or by its
+    published terms to protect the data at least as strongly as this policy requires, to process it only for the
+    purposes set out below, and not to sell it or use it for their own advertising.
   </p>
 
-  <h2>Changes to This Privacy Policy</h2>
+  <h3>OpenAI, L.L.C. &mdash; United States</h3>
   <p>
-    We may update this Privacy Policy from time to time to reflect changes in the app,
-    AI providers, or legal requirements. When we do, we will update the "Last updated"
-    date above. Your continued use of the app after changes are made means you accept
-    the revised policy.
+    <strong>Receives:</strong> the cropped photo you chose to scan, and a fixed text instruction asking for the
+    object&rsquo;s name and description.<br>
+    <strong>Purpose:</strong> generating that identification and returning it to the app.<br>
+    Under the OpenAI API terms that govern our use, content submitted through the API is not used to train OpenAI
+    models; it may be retained for up to 30 days for abuse monitoring and is then deleted. OpenAI does not receive
+    your name, email, device identifiers or location.<br>
+    <a href="https://openai.com/policies/privacy-policy">OpenAI Privacy Policy</a> &middot;
+    <a href="https://openai.com/policies/business-terms">OpenAI API data usage terms</a>
   </p>
 
-  <footer>
-    &copy; SnapID. All rights reserved.
-  </footer>
+  <h3>Cloudflare, Inc. &mdash; United States</h3>
+  <p>
+    <strong>Receives:</strong> the same request, in transit.<br>
+    <strong>Purpose:</strong> SnapId&rsquo;s own relay server runs on Cloudflare Workers so that our OpenAI key
+    never ships inside the app. The relay verifies your anonymous sign-in, counts requests for rate limiting, and
+    forwards the request to OpenAI. It does not store your photo.<br>
+    <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>
+  </p>
 
+  <h3>Google LLC (Firebase) &mdash; United States</h3>
+  <p>
+    <strong>Receives:</strong> a request to create and verify an anonymous sign-in for this app installation, plus
+    the technical data inherent in that request such as your IP address; and, when you subscribe, the store-issued
+    subscription receipt described above.<br>
+    <strong>Purpose:</strong> issuing the anonymous token our relay checks before forwarding anything to OpenAI, and
+    verifying subscription entitlements. No profile, email or name is created.<br>
+    <a href="https://firebase.google.com/support/privacy">Firebase Privacy Information</a>
+  </p>
+
+  <h3>Apple Inc. and Google LLC (app stores)</h3>
+  <p>
+    <strong>Receive:</strong> your purchase and subscription activity, handled entirely by the store. We never see
+    your card details.<br>
+    <strong>Purpose:</strong> processing subscriptions and confirming entitlement.
+  </p>
+
+  <h2>Your consent, and how to withdraw it</h2>
+  <p>
+    Before the first scan, SnapId shows a disclosure naming OpenAI, listing what is sent, and explaining how it is
+    used. Nothing is transmitted unless you tap &ldquo;Agree and continue&rdquo;. If you decline, the rest of the
+    app keeps working and no photo ever leaves your device.
+  </p>
+  <p>
+    To withdraw permission later, open <strong>Settings &rsaquo; AI &amp; Data Sharing</strong> and tap
+    &ldquo;Withdraw permission&rdquo;. From that moment SnapId sends nothing to OpenAI and object identification is
+    disabled until you allow it again. If the disclosure materially changes, we will ask you again rather than rely
+    on your earlier agreement.
+  </p>
+
+  <h2>Retention and deletion</h2>
+  <ul>
+    <li>On your device: photos, results, preferences and your consent record are kept until you delete the app.</li>
+    <li>At OpenAI: up to 30 days for abuse monitoring, then deleted, and never used for model training.</li>
+    <li>
+      On our relay: a per-day request counter keyed to your anonymous identifier, which expires automatically after
+      48 hours. No photos, prompts or responses are stored.
+    </li>
+  </ul>
+
+  <h2>Your rights</h2>
+  <p>
+    Depending on where you live, you may have the right to access, correct, delete or export your personal data, to
+    object to or restrict its processing, and to withdraw consent. Because SnapId keeps your scans only on your
+    device and holds no account, you can exercise deletion yourself by deleting the app. For anything else, or to
+    ask what an anonymous identifier is associated with, write to
+    <a href="mailto:archimidias@gmail.com">archimidias@gmail.com</a> and we will respond within 30 days. We do not
+    sell or share personal information as those terms are defined under US state privacy laws.
+  </p>
+
+  <h2>Diagnostics</h2>
+  <p>
+    We may use basic crash and stability diagnostics provided by the app stores. These are aggregated and do not aim
+    to identify you personally. SnapId contains no third-party advertising or analytics SDKs.
+  </p>
+
+  <h2>Children&rsquo;s privacy</h2>
+  <p>
+    SnapId is a general-purpose camera app and is not directed at children under 13. We do not knowingly collect
+    personal information from children. If you believe a child has submitted personal information through the app,
+    contact <a href="mailto:archimidias@gmail.com">archimidias@gmail.com</a> and we will delete what we can and
+    disable the relevant identifier.
+  </p>
+
+  <h2>International transfers</h2>
+  <p>
+    The providers listed above process data in the United States. If you use SnapId from outside the United States,
+    agreeing to AI sharing means your photo is transferred there for processing.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    We may update this policy to reflect changes in the app, in the providers we use, or in legal requirements. When
+    a change materially affects what is shared or with whom, we will ask for your consent again inside the app rather
+    than relying on this page alone.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this policy or about your data:
+    <a href="mailto:archimidias@gmail.com">archimidias@gmail.com</a>
+  </p>
+</main>
 </body>
 </html>
